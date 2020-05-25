@@ -1,7 +1,6 @@
 {
     //vue文件不使用分号
-    "semi": false,
+    "semi":'false',
     // 使用单引号
-    "singleQuote": true
-
+    "singleQuote":'true'
 }
