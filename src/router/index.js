@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-// import Home from '../views/Home.vue'
 import Login from '../components/login.vue'
 import Home from '../views/Home.vue'
 import Welcome from '../components/Welcome.vue'
 import Users from '../components/user/Users.vue'
+import Rights from '../components/power/Rights.vue'
+import Roles from '../components/power/Roles.vue'
 
 Vue.use(VueRouter)
 
@@ -16,7 +17,9 @@ const routes = [
     path: '/home', component: Home,
     redirect: '/welcome',
     children: [{ path: '/welcome', component: Welcome },
-    { path: '/users', component: Users}
+    { path: '/users', component: Users},
+    { path: '/rights', component: Rights},
+    { path: '/roles', component: Roles}
     ]
   }
 ]
@@ -24,7 +27,8 @@ const routes = [
 const router = new VueRouter({
   routes
 })
-// 挂在路由导航守卫
+// 挂在路由导航守卫  
+// 全局钩子函数 beforeEach    可进行一些页面跳转前处理，判断登录的页面进行拦截，做登录跳转！
 router.beforeEach((to, from, next) => {
   // to 要访问的路径
   // from 代表从哪个路径跳转而来
