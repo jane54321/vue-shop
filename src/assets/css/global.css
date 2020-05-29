@@ -22,3 +22,7 @@ body,
     margin-top: 15px;
     float: right;
 }
+.el-scrollbar__wrap {
+    overflow: hidden;
+    height: 200px;
+}

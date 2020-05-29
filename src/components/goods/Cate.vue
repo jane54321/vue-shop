@@ -251,4 +251,8 @@ export default {
 .el-cascader {
     width: 100%;
 }
+.el-scrollbar__wrap {
+    // overflow: scroll;
+    height: 100px;
+}
 </style>
