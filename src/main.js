@@ -10,6 +10,7 @@ import './plugins/element.js'
 import './assets/css/global.css'
 import TreeTable from 'vue-table-with-tree-grid'
 
+
 // 导入富文本编辑器
 import VueQuillEditor from 'vue-quill-editor'
 // require styles  导入富文本编辑器对应的样式
